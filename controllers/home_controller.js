@@ -1,9 +1,9 @@
-module.exports.home=function(req,res){
-
-
-    return res.render('home',{
-        title:"The home file"
+module.exports.home = function(req, res){
+    console.log(req.cookies);
+    res.cookie('user_id', 25);
+    return res.render('home', {
+        title: "Home"
     });
-
-    //return res.end('<h1>Router & controller is working fine</h1>');
 }
+
+// module.exports.actionName = function(req, res){}
